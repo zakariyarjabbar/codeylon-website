@@ -1,0 +1,35 @@
+name: Validate and back up the static site
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "17 2 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate pages, links, and production files
+        run: python3 scripts/validate_site.py
+
+  weekly-backup:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create restorable archive
+        run: tar --exclude='.git' --exclude='.impeccable' -czf "codeylon-site-${GITHUB_RUN_ID}.tar.gz" .
+      - uses: actions/upload-artifact@v4
+        with:
+          name: codeylon-site-backup-${{ github.run_id }}
+          path: codeylon-site-${{ github.run_id }}.tar.gz
+          retention-days: 90

@@ -1,0 +1,254 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-01T03:48:11+03:00",
+  "title": "Design System: Codeylon",
+  "extensions": {
+    "colorMeta": {
+      "navy-950": {
+        "role": "neutral",
+        "displayName": "Midnight Foundation",
+        "canonical": "oklch(18.4% 0.045 259.3)",
+        "tonalRamp": ["oklch(15% 0.045 259.3)", "oklch(27% 0.045 259.3)", "oklch(39% 0.045 259.3)", "oklch(51% 0.045 259.3)", "oklch(63% 0.045 259.3)", "oklch(75% 0.045 259.3)", "oklch(87% 0.045 259.3)", "oklch(95% 0.045 259.3)"]
+      },
+      "navy-900": {
+        "role": "neutral",
+        "displayName": "Studio Navy",
+        "canonical": "oklch(20.2% 0.051 258.4)",
+        "tonalRamp": ["oklch(15% 0.051 258.4)", "oklch(27% 0.051 258.4)", "oklch(39% 0.051 258.4)", "oklch(51% 0.051 258.4)", "oklch(63% 0.051 258.4)", "oklch(75% 0.051 258.4)", "oklch(87% 0.051 258.4)", "oklch(95% 0.051 258.4)"]
+      },
+      "navy-800": {
+        "role": "neutral",
+        "displayName": "Raised Navy",
+        "canonical": "oklch(28.4% 0.076 258.7)",
+        "tonalRamp": ["oklch(15% 0.076 258.7)", "oklch(27% 0.076 258.7)", "oklch(39% 0.076 258.7)", "oklch(51% 0.076 258.7)", "oklch(63% 0.076 258.7)", "oklch(75% 0.076 258.7)", "oklch(87% 0.076 258.7)", "oklch(95% 0.076 258.7)"]
+      },
+      "navy-700": {
+        "role": "neutral",
+        "displayName": "Linked Navy",
+        "canonical": "oklch(35.4% 0.088 258.2)",
+        "tonalRamp": ["oklch(15% 0.088 258.2)", "oklch(27% 0.088 258.2)", "oklch(39% 0.088 258.2)", "oklch(51% 0.088 258.2)", "oklch(63% 0.088 258.2)", "oklch(75% 0.088 258.2)", "oklch(87% 0.088 258.2)", "oklch(95% 0.088 258.2)"]
+      },
+      "gold-600": {
+        "role": "primary",
+        "displayName": "Antique Gold",
+        "canonical": "oklch(62.2% 0.108 83.0)",
+        "tonalRamp": ["oklch(15% 0.108 83.0)", "oklch(27% 0.108 83.0)", "oklch(39% 0.108 83.0)", "oklch(51% 0.108 83.0)", "oklch(63% 0.108 83.0)", "oklch(75% 0.108 83.0)", "oklch(87% 0.108 83.0)", "oklch(95% 0.108 83.0)"]
+      },
+      "gold-500": {
+        "role": "primary",
+        "displayName": "Ledger Gold",
+        "canonical": "oklch(73.3% 0.115 85.8)",
+        "tonalRamp": ["oklch(15% 0.115 85.8)", "oklch(27% 0.115 85.8)", "oklch(39% 0.115 85.8)", "oklch(51% 0.115 85.8)", "oklch(63% 0.115 85.8)", "oklch(75% 0.115 85.8)", "oklch(87% 0.115 85.8)", "oklch(95% 0.115 85.8)"]
+      },
+      "gold-400": {
+        "role": "primary",
+        "displayName": "Baghdad Brass",
+        "canonical": "oklch(79.3% 0.115 89.3)",
+        "tonalRamp": ["oklch(15% 0.115 89.3)", "oklch(27% 0.115 89.3)", "oklch(39% 0.115 89.3)", "oklch(51% 0.115 89.3)", "oklch(63% 0.115 89.3)", "oklch(75% 0.115 89.3)", "oklch(87% 0.115 89.3)", "oklch(95% 0.115 89.3)"]
+      },
+      "gold-300": {
+        "role": "primary",
+        "displayName": "Pale Brass",
+        "canonical": "oklch(86.8% 0.092 91.0)",
+        "tonalRamp": ["oklch(15% 0.092 91.0)", "oklch(27% 0.092 91.0)", "oklch(39% 0.092 91.0)", "oklch(51% 0.092 91.0)", "oklch(63% 0.092 91.0)", "oklch(75% 0.092 91.0)", "oklch(87% 0.092 91.0)", "oklch(95% 0.092 91.0)"]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm Parchment",
+        "canonical": "oklch(95.3% 0.016 86.4)",
+        "tonalRamp": ["oklch(15% 0.016 86.4)", "oklch(27% 0.016 86.4)", "oklch(39% 0.016 86.4)", "oklch(51% 0.016 86.4)", "oklch(63% 0.016 86.4)", "oklch(75% 0.016 86.4)", "oklch(87% 0.016 86.4)", "oklch(95% 0.016 86.4)"]
+      },
+      "paper-strong": {
+        "role": "neutral",
+        "displayName": "Clean Sheet",
+        "canonical": "oklch(99.4% 0.007 88.6)",
+        "tonalRamp": ["oklch(15% 0.007 88.6)", "oklch(27% 0.007 88.6)", "oklch(39% 0.007 88.6)", "oklch(51% 0.007 88.6)", "oklch(63% 0.007 88.6)", "oklch(75% 0.007 88.6)", "oklch(87% 0.007 88.6)", "oklch(95% 0.007 88.6)"]
+      },
+      "paper-muted": {
+        "role": "neutral",
+        "displayName": "Muted Parchment",
+        "canonical": "oklch(90.9% 0.023 84.6)",
+        "tonalRamp": ["oklch(15% 0.023 84.6)", "oklch(27% 0.023 84.6)", "oklch(39% 0.023 84.6)", "oklch(51% 0.023 84.6)", "oklch(63% 0.023 84.6)", "oklch(75% 0.023 84.6)", "oklch(87% 0.023 84.6)", "oklch(95% 0.023 84.6)"]
+      },
+      "field-background": {
+        "role": "neutral",
+        "displayName": "Field Paper",
+        "canonical": "oklch(99.7% 0.004 91.4)",
+        "tonalRamp": ["oklch(15% 0.004 91.4)", "oklch(27% 0.004 91.4)", "oklch(39% 0.004 91.4)", "oklch(51% 0.004 91.4)", "oklch(63% 0.004 91.4)", "oklch(75% 0.004 91.4)", "oklch(87% 0.004 91.4)", "oklch(95% 0.004 91.4)"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ledger Ink",
+        "canonical": "oklch(25.6% 0.057 258.3)",
+        "tonalRamp": ["oklch(15% 0.057 258.3)", "oklch(27% 0.057 258.3)", "oklch(39% 0.057 258.3)", "oklch(51% 0.057 258.3)", "oklch(63% 0.057 258.3)", "oklch(75% 0.057 258.3)", "oklch(87% 0.057 258.3)", "oklch(95% 0.057 258.3)"]
+      },
+      "ink-muted": {
+        "role": "neutral",
+        "displayName": "Muted Ink",
+        "canonical": "oklch(47.2% 0.037 252.9)",
+        "tonalRamp": ["oklch(15% 0.037 252.9)", "oklch(27% 0.037 252.9)", "oklch(39% 0.037 252.9)", "oklch(51% 0.037 252.9)", "oklch(63% 0.037 252.9)", "oklch(75% 0.037 252.9)", "oklch(87% 0.037 252.9)", "oklch(95% 0.037 252.9)"]
+      },
+      "success": {
+        "role": "secondary",
+        "displayName": "Approval Green",
+        "canonical": "oklch(43.8% 0.094 156.6)",
+        "tonalRamp": ["oklch(15% 0.094 156.6)", "oklch(27% 0.094 156.6)", "oklch(39% 0.094 156.6)", "oklch(51% 0.094 156.6)", "oklch(63% 0.094 156.6)", "oklch(75% 0.094 156.6)", "oklch(87% 0.094 156.6)", "oklch(95% 0.094 156.6)"]
+      },
+      "error": {
+        "role": "secondary",
+        "displayName": "Correction Brick",
+        "canonical": "oklch(49.9% 0.141 27.6)",
+        "tonalRamp": ["oklch(15% 0.141 27.6)", "oklch(27% 0.141 27.6)", "oklch(39% 0.141 27.6)", "oklch(51% 0.141 27.6)", "oklch(63% 0.141 27.6)", "oklch(75% 0.141 27.6)", "oklch(87% 0.141 27.6)", "oklch(95% 0.141 27.6)"]
+      },
+      "line-dark": {
+        "role": "neutral",
+        "displayName": "Dark Rule",
+        "canonical": "rgba(244, 239, 228, 0.18)",
+        "tonalRamp": ["oklch(15% 0.016 86.4 / 0.18)", "oklch(27% 0.016 86.4 / 0.18)", "oklch(39% 0.016 86.4 / 0.18)", "oklch(51% 0.016 86.4 / 0.18)", "oklch(63% 0.016 86.4 / 0.18)", "oklch(75% 0.016 86.4 / 0.18)", "oklch(87% 0.016 86.4 / 0.18)", "oklch(95% 0.016 86.4 / 0.18)"]
+      },
+      "line-light": {
+        "role": "neutral",
+        "displayName": "Light Rule",
+        "canonical": "rgba(17, 35, 62, 0.19)",
+        "tonalRamp": ["oklch(15% 0.057 258.3 / 0.19)", "oklch(27% 0.057 258.3 / 0.19)", "oklch(39% 0.057 258.3 / 0.19)", "oklch(51% 0.057 258.3 / 0.19)", "oklch(63% 0.057 258.3 / 0.19)", "oklch(75% 0.057 258.3 / 0.19)", "oklch(87% 0.057 258.3 / 0.19)", "oklch(95% 0.057 258.3 / 0.19)"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero and utility-page statements with a narrow editorial measure." },
+      "headline": { "displayName": "Headline", "purpose": "Major section openings and content transitions." },
+      "title": { "displayName": "Title", "purpose": "Editorial tertiary headings; operational cards may use Onest instead." },
+      "body": { "displayName": "Body", "purpose": "Long-form explanation, process detail, legal copy, and form guidance." },
+      "label": { "displayName": "Label", "purpose": "Navigation, status, metadata, table headers, and form labels." }
+    },
+    "shadows": [
+      { "name": "document-lift", "value": "0 18px 48px rgba(6, 18, 38, 0.16)", "purpose": "Scope sheets and form panels placed on dark fields." },
+      { "name": "primary-action-rest", "value": "0 8px 22px rgba(217, 184, 95, 0.22)", "purpose": "Gold primary buttons at rest." },
+      { "name": "primary-action-hover", "value": "0 12px 26px rgba(217, 184, 95, 0.28)", "purpose": "Gold primary buttons after the hover rise." },
+      { "name": "ink-action-hover", "value": "0 10px 26px rgba(6, 18, 38, 0.16)", "purpose": "Navy buttons hovering on light surfaces." },
+      { "name": "floating-notice", "value": "0 20px 56px rgba(6, 18, 38, 0.28)", "purpose": "Consent banner and comparable transient notices." },
+      { "name": "modal-lift", "value": "0 24px 80px rgba(6, 18, 38, 0.35)", "purpose": "Modal dialogs above a darkened backdrop." }
+    ],
+    "motion": [
+      { "name": "state-fast", "value": "160ms ease-out", "purpose": "Button, switch, and simple control state changes." },
+      { "name": "state-compact", "value": "150ms ease-out", "purpose": "Field border, focus ring, and footer-link state changes." },
+      { "name": "detail-reveal", "value": "180ms ease-out", "purpose": "Navigation underlines, menu glyphs, and FAQ indicators." },
+      { "name": "drawer-reveal", "value": "220ms cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Mobile navigation clip-path reveal." },
+      { "name": "notice-enter", "value": "280ms cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Consent banner entrance." },
+      { "name": "sheet-progress", "value": "900ms cubic-bezier(0.16, 1, 0.3, 1) 220ms", "purpose": "Signature scope-sheet progress rule." }
+    ],
+    "breakpoints": [
+      { "name": "navigation-collapse", "value": "980px" },
+      { "name": "single-column", "value": "700px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The dominant project-starting action on dark and utility surfaces.",
+      "html": "<button class=\"ds-btn-primary\" type=\"button\">START A PROJECT</button>",
+      "css": ".ds-btn-primary { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; padding: 0.78rem 1.15rem; background: var(--gold-400, #d9b85f); color: var(--navy-950, #061226); border: 1px solid var(--gold-400, #d9b85f); border-radius: 2px; box-shadow: 0 8px 22px rgba(217, 184, 95, 0.22); font-family: var(--font-sans, \"Onest\", Arial, sans-serif); font-size: 0.93rem; font-weight: 700; line-height: 1; transition: background-color 160ms ease-out, border-color 160ms ease-out, transform 160ms ease-out, box-shadow 160ms ease-out; cursor: pointer; } .ds-btn-primary:hover { background: var(--gold-300, #ead28d); border-color: var(--gold-300, #ead28d); box-shadow: 0 12px 26px rgba(217, 184, 95, 0.28); transform: translateY(-2px); } .ds-btn-primary:focus-visible { outline: 3px solid var(--gold-400, #d9b85f); outline-offset: 4px; } .ds-btn-primary:active { transform: translateY(0); }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "A supporting action designed specifically for a navy field.",
+      "html": "<div class=\"ds-dark-canvas\"><button class=\"ds-btn-secondary\" type=\"button\">SEE WHAT WE BUILD</button></div>",
+      "css": ".ds-dark-canvas { padding: 1.5rem; background: var(--navy-900, #07162d); } .ds-btn-secondary { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; padding: 0.78rem 1.15rem; background: transparent; color: var(--paper-strong, #fffdf8); border: 1px solid rgba(244, 239, 228, 0.45); border-radius: 2px; font-family: var(--font-sans, \"Onest\", Arial, sans-serif); font-size: 0.93rem; font-weight: 700; line-height: 1; transition: background-color 160ms ease-out, border-color 160ms ease-out, transform 160ms ease-out; cursor: pointer; } .ds-btn-secondary:hover { background: rgba(244, 239, 228, 0.08); border-color: var(--paper-strong, #fffdf8); transform: translateY(-2px); } .ds-btn-secondary:focus-visible { outline: 3px solid var(--gold-400, #d9b85f); outline-offset: 4px; } .ds-btn-secondary:active { transform: translateY(0); }"
+    },
+    {
+      "name": "Ink Button",
+      "kind": "button",
+      "refersTo": "button-ink",
+      "description": "The decisive submit or save action used inside light document panels.",
+      "html": "<button class=\"ds-btn-ink\" type=\"button\">SEND PROJECT BRIEF</button>",
+      "css": ".ds-btn-ink { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; padding: 0.78rem 1.15rem; background: var(--navy-900, #07162d); color: var(--paper-strong, #fffdf8); border: 1px solid var(--navy-900, #07162d); border-radius: 2px; font-family: var(--font-sans, \"Onest\", Arial, sans-serif); font-size: 0.93rem; font-weight: 700; line-height: 1; transition: background-color 160ms ease-out, transform 160ms ease-out, box-shadow 160ms ease-out; cursor: pointer; } .ds-btn-ink:hover { background: var(--navy-800, #10294f); box-shadow: 0 10px 26px rgba(6, 18, 38, 0.16); transform: translateY(-2px); } .ds-btn-ink:focus-visible { outline: 3px solid var(--gold-400, #d9b85f); outline-offset: 4px; } .ds-btn-ink:active { transform: translateY(0); }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "A square, high-contrast field with explicit label, hint, focus, and invalid states.",
+      "html": "<div class=\"ds-field\"><label for=\"ds-business\">Business or organization</label><input id=\"ds-business\" type=\"text\" aria-describedby=\"ds-business-hint\"><span id=\"ds-business-hint\">Leave blank if the name is not decided yet.</span></div>",
+      "css": ".ds-field { max-width: 28rem; font-family: var(--font-sans, \"Onest\", Arial, sans-serif); color: var(--ink, #11233e); } .ds-field label { display: block; margin-bottom: 0.42rem; font-size: 0.85rem; font-weight: 700; } .ds-field input { width: 100%; min-height: 50px; padding: 0.76rem 0.82rem; background: var(--field-background, #fffefb); color: var(--ink, #11233e); border: 1px solid rgba(17, 35, 62, 0.36); border-radius: 0; caret-color: var(--gold-600, #a6802f); font: inherit; transition: border-color 150ms ease-out, box-shadow 150ms ease-out; } .ds-field input:hover { border-color: var(--navy-700, #1c3b69); } .ds-field input:focus { border-color: var(--gold-600, #a6802f); box-shadow: 0 0 0 3px rgba(201, 163, 75, 0.19); outline: none; } .ds-field input[aria-invalid=\"true\"] { border-color: var(--error, #a43b33); box-shadow: 0 0 0 3px rgba(164, 59, 51, 0.12); } .ds-field span { display: block; min-height: 1.25rem; margin-top: 0.35rem; color: var(--ink-muted, #4d5d70); font-size: 0.76rem; line-height: 1.35; }"
+    },
+    {
+      "name": "Site Navigation",
+      "kind": "nav",
+      "description": "The compact studio header with angular mark, restrained links, and one gold action.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Design system navigation\"><a class=\"ds-brand\" href=\"#\" aria-label=\"Codeylon home\"><svg viewBox=\"0 0 48 48\" aria-hidden=\"true\"><path fill=\"#d9b85f\" d=\"M5 6h38v9H15v18h28v9H5z\"/><path fill=\"#f4efe4\" d=\"M24 15h19v18H24l9-9z\"/></svg><span>CODEYLON</span></a><div class=\"ds-nav-links\"><a href=\"#\">Services</a><a href=\"#\">Process</a><a href=\"#\">FAQ</a><a class=\"ds-nav-action\" href=\"#\">Start a project</a></div></nav>",
+      "css": ".ds-nav { display: flex; min-height: 76px; align-items: center; justify-content: space-between; gap: 2rem; padding: 0 1.25rem; background: rgba(7, 22, 45, 0.97); color: var(--paper-strong, #fffdf8); border-bottom: 1px solid rgba(244, 239, 228, 0.18); font-family: var(--font-sans, \"Onest\", Arial, sans-serif); } .ds-brand { display: inline-flex; min-height: 44px; align-items: center; gap: 0.72rem; color: inherit; font-size: 0.92rem; font-weight: 700; letter-spacing: 0.09em; text-decoration: none; } .ds-brand svg { width: 31px; height: 31px; } .ds-nav-links { display: flex; align-items: center; gap: 1.5rem; } .ds-nav-links > a:not(.ds-nav-action) { position: relative; display: inline-flex; min-height: 44px; align-items: center; color: rgba(244, 239, 228, 0.76); font-size: 0.9rem; text-decoration: none; transition: color 160ms ease-out; } .ds-nav-links > a:not(.ds-nav-action)::after { position: absolute; right: 0; bottom: 6px; left: 0; height: 1px; background: var(--gold-400, #d9b85f); content: \"\"; transform: scaleX(0); transform-origin: right; transition: transform 180ms ease-out; } .ds-nav-links > a:not(.ds-nav-action):hover { color: var(--paper-strong, #fffdf8); } .ds-nav-links > a:not(.ds-nav-action):hover::after { transform: scaleX(1); transform-origin: left; } .ds-nav a:focus-visible { outline: 3px solid var(--gold-400, #d9b85f); outline-offset: 4px; } .ds-nav-action { display: inline-flex; min-height: 48px; align-items: center; padding: 0 1.15rem; background: var(--gold-400, #d9b85f); color: var(--navy-950, #061226); border: 1px solid var(--gold-400, #d9b85f); border-radius: 2px; font-size: 0.9rem; font-weight: 700; text-decoration: none; transition: background 160ms ease-out, transform 160ms ease-out; } .ds-nav-action:hover { background: var(--gold-300, #ead28d); transform: translateY(-2px); }"
+    },
+    {
+      "name": "Scope Sheet",
+      "kind": "card",
+      "refersTo": "scope-sheet",
+      "description": "The signature accountable-estimate document with status, progress, and ruled rows.",
+      "html": "<article class=\"ds-scope-sheet\"><div class=\"ds-scope-head\"><h3>Typical build windows</h3><span>Taking enquiries</span></div><div class=\"ds-estimate\"><div><strong>Focused landing page</strong><small>One goal, one responsive page</small></div><b>5–8 working days</b></div><div class=\"ds-estimate\"><div><strong>Small business website</strong><small>Usually 4–6 core pages</small></div><b>2–3 weeks</b></div><p>Estimates begin after scope, content, and feedback responsibilities are agreed.</p></article>",
+      "css": ".ds-scope-sheet { position: relative; max-width: 34rem; padding: 2rem; overflow: hidden; background: var(--paper-strong, #fffdf8); color: var(--ink, #11233e); border: 1px solid rgba(217, 184, 95, 0.55); border-radius: 0; box-shadow: 0 18px 48px rgba(6, 18, 38, 0.16); font-family: var(--font-sans, \"Onest\", Arial, sans-serif); } .ds-scope-sheet::before { position: absolute; top: 0; left: 0; width: 42%; height: 4px; background: var(--gold-500, #c9a34b); content: \"\"; } .ds-scope-head { display: flex; margin-bottom: 1rem; padding-bottom: 1rem; align-items: flex-start; justify-content: space-between; gap: 1rem; border-bottom: 1px solid rgba(17, 35, 62, 0.19); } .ds-scope-head h3 { margin: 0; font-size: 1.04rem; letter-spacing: -0.01em; } .ds-scope-head span { display: inline-flex; align-items: center; gap: 0.42rem; color: var(--success, #17613c); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; } .ds-scope-head span::before { width: 7px; height: 7px; background: currentColor; border-radius: 50%; box-shadow: 0 0 0 5px rgba(23, 97, 60, 0.1); content: \"\"; } .ds-estimate { display: grid; padding: 1rem 0; grid-template-columns: minmax(0, 1fr) auto; gap: 1rem; align-items: baseline; border-bottom: 1px solid rgba(17, 35, 62, 0.19); } .ds-estimate strong, .ds-estimate small { display: block; } .ds-estimate small { margin-top: 0.18rem; color: var(--ink-muted, #4d5d70); font-size: 0.76rem; } .ds-estimate b { color: var(--gold-600, #a6802f); font-size: 0.82rem; white-space: nowrap; } .ds-scope-sheet p { margin: 1rem 0 0; color: var(--ink-muted, #4d5d70); font-size: 0.76rem; line-height: 1.5; } .ds-scope-sheet:focus-within { outline: 3px solid var(--gold-400, #d9b85f); outline-offset: 4px; }"
+    },
+    {
+      "name": "Form Panel",
+      "kind": "card",
+      "refersTo": "form-panel",
+      "description": "The project-brief document panel with a gold priority rule and explicit field hierarchy.",
+      "html": "<form class=\"ds-form-panel\"><header><h3>Project brief</h3><p>Required fields are marked. Most useful briefs take 3–5 minutes.</p></header><label for=\"ds-goal\">What should the website achieve? <span>(required)</span></label><textarea id=\"ds-goal\" required></textarea><small>Include the audience, main goal, required pages, and known integrations.</small><button type=\"button\">Send project brief</button></form>",
+      "css": ".ds-form-panel { max-width: 36rem; padding: 2rem; background: var(--paper-strong, #fffdf8); color: var(--ink, #11233e); border: 0; border-top: 4px solid var(--gold-500, #c9a34b); border-radius: 0; box-shadow: 0 18px 48px rgba(6, 18, 38, 0.16); font-family: var(--font-sans, \"Onest\", Arial, sans-serif); } .ds-form-panel header { margin-bottom: 1.6rem; padding-bottom: 1.2rem; border-bottom: 1px solid rgba(17, 35, 62, 0.19); } .ds-form-panel h3 { margin: 0 0 0.35rem; font-size: 1.08rem; } .ds-form-panel p { margin: 0; color: var(--ink-muted, #4d5d70); font-size: 0.9rem; } .ds-form-panel label { display: block; margin-bottom: 0.42rem; font-size: 0.85rem; font-weight: 700; } .ds-form-panel label span { color: var(--ink-muted, #4d5d70); font-size: 0.76rem; font-weight: 500; } .ds-form-panel textarea { width: 100%; min-height: 142px; padding: 0.76rem 0.82rem; resize: vertical; background: var(--field-background, #fffefb); color: var(--ink, #11233e); border: 1px solid rgba(17, 35, 62, 0.36); border-radius: 0; font: inherit; transition: border-color 150ms ease-out, box-shadow 150ms ease-out; } .ds-form-panel textarea:hover { border-color: var(--navy-700, #1c3b69); } .ds-form-panel textarea:focus { border-color: var(--gold-600, #a6802f); box-shadow: 0 0 0 3px rgba(201, 163, 75, 0.19); outline: none; } .ds-form-panel small { display: block; margin-top: 0.35rem; color: var(--ink-muted, #4d5d70); font-size: 0.76rem; line-height: 1.35; } .ds-form-panel button { min-height: 48px; margin-top: 1.4rem; padding: 0.78rem 1.15rem; background: var(--navy-900, #07162d); color: var(--paper-strong, #fffdf8); border: 1px solid var(--navy-900, #07162d); border-radius: 2px; font: inherit; font-size: 0.93rem; font-weight: 700; cursor: pointer; transition: background 160ms ease-out, transform 160ms ease-out; } .ds-form-panel button:hover { background: var(--navy-800, #10294f); transform: translateY(-2px); } .ds-form-panel button:focus-visible { outline: 3px solid var(--gold-400, #d9b85f); outline-offset: 4px; }"
+    },
+    {
+      "name": "Consent Banner",
+      "kind": "custom",
+      "description": "A floating privacy notice that keeps accept, refuse, and settings choices equally visible.",
+      "html": "<section class=\"ds-consent\"><h3>Your privacy choice</h3><p>We use essential storage to remember this choice. Optional analytics only loads after you allow it.</p><div><button class=\"ds-consent-quiet\" type=\"button\">Essential only</button><button class=\"ds-consent-ink\" type=\"button\">Allow analytics</button><button class=\"ds-consent-quiet\" type=\"button\">Settings</button></div></section>",
+      "css": ".ds-consent { width: min(100%, 430px); padding: 1.2rem; background: var(--paper-strong, #fffdf8); color: var(--ink, #11233e); border: 1px solid rgba(17, 35, 62, 0.34); border-top: 4px solid var(--gold-500, #c9a34b); border-radius: 0; box-shadow: 0 20px 56px rgba(6, 18, 38, 0.28); font-family: var(--font-sans, \"Onest\", Arial, sans-serif); } .ds-consent h3 { margin: 0 0 0.45rem; font-size: 1rem; letter-spacing: -0.01em; } .ds-consent p { margin: 0 0 1rem; color: var(--ink-muted, #4d5d70); font-size: 0.82rem; line-height: 1.5; } .ds-consent > div { display: flex; flex-wrap: wrap; gap: 0.55rem; } .ds-consent button { min-height: 42px; padding: 0.65rem 0.8rem; border-radius: 2px; font: inherit; font-size: 0.8rem; font-weight: 700; cursor: pointer; transition: background 160ms ease-out, transform 160ms ease-out; } .ds-consent-quiet { background: transparent; color: var(--ink, #11233e); border: 1px solid rgba(17, 35, 62, 0.45); } .ds-consent-quiet:hover { background: rgba(17, 35, 62, 0.06); transform: translateY(-2px); } .ds-consent-ink { background: var(--navy-900, #07162d); color: var(--paper-strong, #fffdf8); border: 1px solid var(--navy-900, #07162d); } .ds-consent-ink:hover { background: var(--navy-800, #10294f); transform: translateY(-2px); } .ds-consent button:focus-visible { outline: 3px solid var(--gold-400, #d9b85f); outline-offset: 4px; } .ds-consent button:active { transform: translateY(0); }"
+    },
+    {
+      "name": "Privacy Switch",
+      "kind": "custom",
+      "description": "The sole pill-shaped control, reserved for a binary preference mechanism.",
+      "html": "<label class=\"ds-switch\"><span>Allow analytics</span><input type=\"checkbox\" checked><i aria-hidden=\"true\"></i></label>",
+      "css": ".ds-switch { display: inline-flex; align-items: center; gap: 1rem; color: var(--ink, #11233e); font-family: var(--font-sans, \"Onest\", Arial, sans-serif); font-size: 0.85rem; font-weight: 700; cursor: pointer; } .ds-switch input { position: absolute; width: 1px; height: 1px; opacity: 0; } .ds-switch i { position: relative; display: inline-block; width: 52px; height: 30px; background: #c8c2b8; border-radius: 999px; transition: background 160ms ease-out; } .ds-switch i::after { position: absolute; top: 4px; left: 4px; width: 22px; height: 22px; background: #fff; border-radius: 50%; box-shadow: 0 2px 8px rgba(6, 18, 38, 0.24); content: \"\"; transition: transform 160ms ease-out; } .ds-switch input:checked + i { background: var(--success, #17613c); } .ds-switch input:checked + i::after { transform: translateX(22px); } .ds-switch input:focus-visible + i { outline: 3px solid var(--gold-400, #d9b85f); outline-offset: 4px; } .ds-switch:hover i { filter: brightness(1.04); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Scope Ledger",
+    "overview": "Codeylon looks like a carefully prepared project document rather than a glossy software product. The visual system combines editorial authority with the practical clarity of a scope sheet: deep navy fields establish seriousness, warm parchment keeps long reading comfortable, and restrained gold marks decisions, progress, and action.\n\nThe composition is calm, precise, and contact-first. Large serif statements establish hierarchy, while the sans-serif layer handles navigation, evidence, labels, tables, forms, and operational detail. Trust comes from visible structure, explicit boundaries, and production quality—not stock imagery, fabricated proof, or decorative spectacle.",
+    "keyCharacteristics": [
+      "Editorial serif authority paired with operational sans-serif clarity.",
+      "Alternating navy and parchment fields separated by fine rules.",
+      "Structured lists, tables, timelines, and scope sheets instead of generic card grids.",
+      "Restrained gold used as a scarce signal for actions, status, and emphasis.",
+      "Square, document-like surfaces with limited lift and short purposeful motion.",
+      "Contact and project-brief actions remain the dominant conversion path."
+    ],
+    "rules": [
+      { "name": "The Restrained Gold Rule", "body": "Gold is a signal, not a background habit: reserve it for action, status, progress, focus, and brief moments of emphasis.", "section": "colors" },
+      { "name": "The Tonal Contrast Rule", "body": "Build long pages by alternating navy and parchment fields; do not introduce unrelated colored sections to manufacture variety.", "section": "colors" },
+      { "name": "The Editorial Authority Rule", "body": "Serif type makes the promise; sans-serif type explains the scope, evidence, state, and next action.", "section": "typography" },
+      { "name": "The Narrow Statement Rule", "body": "Keep display headings deliberately narrow and balanced rather than stretching them across the container.", "section": "typography" },
+      { "name": "The Scope-Sheet Rule", "body": "Use structure—columns, ledgers, rules, tables, and ordered steps—to make information scannable before adding decoration.", "section": "layout" },
+      { "name": "The One-Column Mobile Rule", "body": "Preserve reading order and explicit labels when compositions collapse; never rely on desktop position alone to convey meaning.", "section": "layout" },
+      { "name": "The Flat-by-Default Rule", "body": "If a surface is part of the normal reading flow, separate it with tone or a fine rule; reserve shadows for documents, actions, and overlays that genuinely sit above another layer.", "section": "elevation" },
+      { "name": "The Precise Edge Rule", "body": "Default to square corners; use a pill or circle only when the control's mechanism or status requires it.", "section": "shapes" },
+      { "name": "The Contact-First Rule", "body": "Primary actions start or send a project brief; secondary actions explain scope, standards, or privacy without competing for attention.", "section": "components" }
+    ],
+    "dos": [
+      "Do preserve the navy, restrained gold, and warm parchment hierarchy across every public surface.",
+      "Do use Source Serif 4 for major editorial statements and Onest for operational detail and controls.",
+      "Do structure dense content with ruled rows, tables, timelines, and scope-sheet compositions.",
+      "Do keep contact and project-brief actions prominent without displaying public prices.",
+      "Do retain visible focus, clear form errors, reduced-motion behavior, and labeled mobile table rows.",
+      "Do earn trust through precise scope, process, realistic timing, and production details."
+    ],
+    "donts": [
+      "Don't introduce generic tiled-card layouts when a ruled list, ledger, or structured row is clearer.",
+      "Don't use glossy gradients, glassy SaaS panels, oversized pills, neon accents, or decorative dashboard chrome.",
+      "Don't flood sections with gold; its scarcity is what makes it useful.",
+      "Don't add stock photography, placeholder imagery, fake testimonials, invented logos, awards, metrics, or case studies.",
+      "Don't publish package pricing or imply backend capabilities outside the confirmed front-end scope.",
+      "Don't use inflated startup or AI language in visual labels, calls to action, or supporting copy."
+    ]
+  }
+}
