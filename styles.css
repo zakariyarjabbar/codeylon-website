@@ -73,7 +73,22 @@ body {
 }
 
 body.nav-open {
+  position: fixed;
+  right: 0;
+  left: 0;
+  width: 100%;
   overflow: hidden;
+}
+
+html.is-restoring-scroll {
+  scroll-behavior: auto;
+}
+
+body.nav-open .site-header {
+  position: fixed;
+  right: 0;
+  left: 0;
+  width: 100%;
 }
 
 ::selection {

@@ -32,6 +32,23 @@
     if (!toggle || !mobileNav) return;
     var obscuredRegions = document.querySelectorAll("main, .site-footer, .utility-footer");
     var fallbackTabState = [];
+    var lockedScrollY = 0;
+
+    function lockPageScroll() {
+      lockedScrollY = window.scrollY || window.pageYOffset || 0;
+      document.body.style.top = "-" + lockedScrollY + "px";
+      document.body.classList.add("nav-open");
+    }
+
+    function unlockPageScroll() {
+      document.body.classList.remove("nav-open");
+      document.body.style.removeProperty("top");
+      document.documentElement.classList.add("is-restoring-scroll");
+      window.scrollTo(0, lockedScrollY);
+      window.requestAnimationFrame(function () {
+        document.documentElement.classList.remove("is-restoring-scroll");
+      });
+    }
 
     function setPageInert(isOpen) {
       obscuredRegions.forEach(function (region) {
@@ -63,7 +80,8 @@
       toggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
       mobileNav.setAttribute("aria-hidden", String(!isOpen));
       mobileNav.classList.toggle("is-open", isOpen);
-      document.body.classList.toggle("nav-open", isOpen);
+      if (isOpen) lockPageScroll();
+      else unlockPageScroll();
       setPageInert(isOpen);
       if (!isOpen && restoreFocus !== false) toggle.focus();
     }
