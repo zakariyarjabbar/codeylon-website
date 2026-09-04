@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Small dependency-free validator for the Codeylon static site."""
+"""Dependency-free checks for the generated Codeylon Next.js export."""
 
 from __future__ import annotations
 
@@ -11,7 +11,8 @@ from urllib.parse import unquote, urlsplit
 
 
 ROOT = Path(__file__).resolve().parents[1]
-HTML_FILES = sorted(ROOT.glob("*.html"))
+EXPORT = ROOT / "out"
+HTML_FILES = sorted(EXPORT.rglob("*.html")) if EXPORT.exists() else []
 SKIP_SCHEMES = ("http://", "https://", "mailto:", "tel:", "data:", "javascript:")
 PLACEHOLDER_PATTERN = re.compile(r"\b(lorem ipsum|todo|tbd|coming soon|g-xxxx)\b", re.I)
 CURRENCY_PATTERN = re.compile(r"(?:[$€£]\s?\d|\b(?:USD|EUR|IQD)\s?\d)", re.I)
@@ -52,7 +53,7 @@ class PageParser(HTMLParser):
             self.meta_description = True
         if tag == "meta" and data.get("name", "").lower() == "robots" and "noindex" in (data.get("content") or "").lower():
             self.noindex = True
-        if tag == "link" and data.get("rel") == "canonical" and data.get("href"):
+        if tag == "link" and "canonical" in (data.get("rel") or "").split() and data.get("href"):
             self.canonical = True
         if tag == "a" and data.get("target") == "_blank":
             self.target_blank_links.append(data)
@@ -66,19 +67,25 @@ class PageParser(HTMLParser):
             self.title_parts.append(data)
 
 
-def local_target(page: Path, value: str) -> Path | None:
+def exported_target(value: str) -> Path | None:
     value = value.strip()
     if not value or value.startswith("#") or value.lower().startswith(SKIP_SCHEMES):
         return None
     path = unquote(urlsplit(value).path)
     if not path or path == "/":
-        return ROOT / "index.html"
-    return (ROOT / path.lstrip("/")) if path.startswith("/") else (page.parent / path)
+        return EXPORT / "index.html"
+    candidate = EXPORT / path.lstrip("/")
+    if candidate.exists():
+        return candidate
+    if path.endswith("/") or not Path(path).suffix:
+        return candidate / "index.html"
+    return candidate
 
 
 def validate_page(page: Path) -> list[str]:
     errors: list[str] = []
     text = page.read_text(encoding="utf-8")
+    visible_source = re.sub(r"<(?:script|style)\b[^>]*>.*?</(?:script|style)>", "", text, flags=re.I | re.S)
     parser = PageParser()
     parser.feed(text)
 
@@ -109,7 +116,7 @@ def validate_page(page: Path) -> list[str]:
             errors.append(f"placeholder attribute is not allowed: {field.get('name', field_id or '(unnamed)')}")
 
     for tag, value in parser.links:
-        target = local_target(page, value)
+        target = exported_target(value)
         if target is not None and not target.exists():
             errors.append(f"broken local {tag} reference: {value}")
 
@@ -118,36 +125,63 @@ def validate_page(page: Path) -> list[str]:
         if not {"noopener", "noreferrer"}.issubset(rel):
             errors.append(f"target=_blank link lacks noopener noreferrer: {link.get('href')}")
 
-    placeholder = PLACEHOLDER_PATTERN.search(text)
+    placeholder = PLACEHOLDER_PATTERN.search(visible_source)
     if placeholder:
         errors.append(f"placeholder phrase found: {placeholder.group(0)!r}")
-    if page.name == "index.html" and CURRENCY_PATTERN.search(text):
+    if page == EXPORT / "index.html" and CURRENCY_PATTERN.search(visible_source):
         errors.append("public home page contains a currency amount")
     return errors
 
 
 def main() -> int:
     all_errors: list[tuple[Path, str]] = []
+    if not EXPORT.exists():
+        print("Site validation failed: out/ does not exist. Run npm run build first.")
+        return 1
+
+    expected_pages = {
+        "index.html",
+        "404.html",
+        "privacy/index.html",
+        "cookies/index.html",
+        "terms/index.html",
+        "thank-you/index.html",
+    }
+    for relative in sorted(expected_pages):
+        if not (EXPORT / relative).exists():
+            all_errors.append((EXPORT / relative, "generated page is missing"))
+
+    required = {
+        "_headers",
+        "_redirects",
+        "robots.txt",
+        "sitemap.xml",
+        "manifest.webmanifest",
+        "assets/og-codeylon.png",
+        "assets/logo-mark.svg",
+    }
+    for relative in sorted(required):
+        if not (EXPORT / relative).exists():
+            all_errors.append((EXPORT / relative, "required exported file is missing"))
+
+    headers = (EXPORT / "_headers").read_text(encoding="utf-8") if (EXPORT / "_headers").exists() else ""
+    if "'unsafe-inline'" in headers:
+        all_errors.append((EXPORT / "_headers", "CSP must not allow unrestricted inline scripts"))
+    if "'sha256-" not in headers:
+        all_errors.append((EXPORT / "_headers", "CSP is missing generated inline-script hashes"))
+
     for page in HTML_FILES:
         for error in validate_page(page):
             all_errors.append((page, error))
 
-    required = {
-        "styles.css", "script.js", "site-config.js", "robots.txt", "sitemap.xml",
-        "privacy.html", "cookies.html", "terms.html", "404.html", "thank-you.html",
-        "_headers", "assets/og-codeylon.png",
-    }
-    for relative in sorted(required):
-        if not (ROOT / relative).exists():
-            all_errors.append((ROOT / relative, "required file is missing"))
-
     if all_errors:
         print(f"Site validation failed with {len(all_errors)} issue(s):")
         for path, message in all_errors:
-            print(f"- {path.relative_to(ROOT) if path.is_relative_to(ROOT) else path}: {message}")
+            display = path.relative_to(ROOT) if path.is_relative_to(ROOT) else path
+            print(f"- {display}: {message}")
         return 1
 
-    print(f"Site validation passed: {len(HTML_FILES)} HTML pages checked.")
+    print(f"Site validation passed: {len(HTML_FILES)} generated HTML pages checked.")
     return 0
 
 

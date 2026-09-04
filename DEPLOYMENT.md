@@ -1,6 +1,6 @@
 # Production launch checklist
 
-The site code is ready to deploy as a static website. The items below require owner credentials or operational decisions and cannot be completed safely in source code alone.
+The Next.js site is configured with `output: "export"` and builds to the static `out/` directory. The items below require owner credentials or operational decisions and cannot be completed safely in source code alone.
 
 ## 1. Confirm business details
 
@@ -15,7 +15,7 @@ The form posts to FormSubmit for `hello@codeylon.com`. On the first real submiss
 After activation:
 
 1. Send a real low-risk test brief.
-2. Confirm it arrives in the inbox and redirects to `/thank-you.html`.
+2. Confirm it arrives in the inbox and redirects to `/thank-you/`.
 3. Confirm spam filtering does not hide it.
 4. Record FormSubmit as a processor in Codeylon's internal provider list.
 
@@ -25,18 +25,20 @@ If Codeylon changes form provider, update the form action, Content Security Poli
 
 Analytics is deliberately disabled because no account ID was provided. The consent controls and Google Analytics 4 loader are ready.
 
-To enable it, set the real measurement ID in `site-config.js`:
+To enable it locally, create `.env.local` and set the public measurement ID:
 
-```js
-measurementId: "G-REALID"
+```sh
+NEXT_PUBLIC_GA_MEASUREMENT_ID=G-REALID
 ```
+
+For Cloudflare Pages, configure the same variable in the project build settings before deploying.
 
 Before deploying that change:
 
 - configure the analytics property for `codeylon.com`;
 - use the shortest practical retention period;
 - keep Google Signals and ad personalization disabled unless separately justified;
-- update `cookies.html` with the exact active cookies and retention;
+- update the cookie policy page with the exact active cookies and retention;
 - verify no request to Google occurs before consent and that withdrawal stops future loading.
 
 ## 4. Legal review
@@ -45,7 +47,8 @@ The privacy, cookie, and website terms pages are practical drafts matched to the
 
 ## 5. Hosting, DNS, and security
 
-- Deploy only the public project files; do not deploy local backups or repository secrets.
+- Use build command `npm run build` and output directory `out`.
+- Deploy only the generated `out/` directory; do not deploy local backups or repository secrets.
 - Connect `codeylon.com` and `www.codeylon.com`, choose one canonical host, and redirect the other.
 - Force HTTPS.
 - Confirm the host reads `_headers` and `_redirects`. If it does not, reproduce them in the host configuration.
@@ -72,3 +75,17 @@ The included GitHub Actions workflow validates every push and creates a 90-day d
 - Confirm there is no mixed content and no unexpected third-party request before consent.
 - Run a Lighthouse production audit and investigate regressions rather than chasing a perfect lab score.
 - Submit `https://codeylon.com/sitemap.xml` in the search console used by Codeylon.
+
+## 8. Cloudflare Pages commands
+
+For Git integration, use:
+
+- Framework preset: **Next.js (Static HTML Export)**
+- Build command: `npm run build`
+- Build output directory: `out`
+
+For a direct Wrangler deployment:
+
+```sh
+npm run deploy
+```

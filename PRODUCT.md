@@ -8,7 +8,7 @@ web
 
 ## Stack
 
-Static HTML, CSS, and JavaScript. The current project is intentionally lightweight and does not require an application framework.
+Next.js App Router with React, exported as a fully static site. The project remains intentionally lightweight and does not require a backend runtime.
 
 ## Users
 
@@ -45,7 +45,7 @@ Prospects may arrive from search, the codeylon.com domain, or Codeylon's Instagr
 
 ## Evidence on Hand
 
-- Existing static website in `index.html`.
+- Existing Next.js App Router implementation in `app/`, exported to static HTML for deployment.
 - Existing contact address in the website: hello@codeylon.com.
 - No verified client logos, testimonials, awards, performance statistics, or case studies are available; future work must not fabricate them.
 - No photography is required. Interface and diagrammatic visuals should be authored from the design system rather than filled with stock placeholders.

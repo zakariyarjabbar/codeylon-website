@@ -4,11 +4,11 @@
 
 Email `hello@codeylon.com` with the subject `Security report`. Include the affected URL, a clear description, reproduction steps, and the impact. Do not include unrelated personal data or publicly disclose an unresolved issue.
 
-## Static-site security model
+## Static-export security model
 
-The website intentionally has no accounts, authentication, database, custom API, or backend application. Its main external processor is the FormSubmit endpoint used by the project brief form. Optional Google Analytics code remains disabled until a valid measurement ID is added and a visitor consents.
+The Next.js source is compiled to a static export and intentionally has no accounts, authentication, database, custom API, or backend application. Its main external processor is the FormSubmit endpoint used by the project brief form. Optional Google Analytics code remains disabled until a valid measurement ID is added and a visitor consents.
 
-The `_headers` file defines a restrictive Content Security Policy, clickjacking protection, browser feature restrictions, referrer controls, and MIME-sniffing protection for compatible static hosts.
+The `_headers` file defines a restrictive Content Security Policy, clickjacking protection, browser feature restrictions, referrer controls, and MIME-sniffing protection for compatible static hosts. The build finalizer hashes Next.js inline bootstrap scripts and adds only those hashes to the exported policy instead of enabling unrestricted inline scripts.
 
 ## Deployment requirements
 

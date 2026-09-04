@@ -1,0 +1,21 @@
+export const dynamic = "force-static";
+
+export default function manifest() {
+  return {
+    name: "Codeylon",
+    short_name: "Codeylon",
+    description: "Front-end websites with clear scope and realistic schedules.",
+    start_url: "/",
+    display: "browser",
+    background_color: "#07162d",
+    theme_color: "#07162d",
+    icons: [
+      {
+        src: "/assets/favicon.svg",
+        sizes: "any",
+        type: "image/svg+xml",
+        purpose: "any",
+      },
+    ],
+  };
+}

@@ -1,6 +1,6 @@
 # Codeylon website
 
-Production-ready static website for Codeylon, a Baghdad-based front-end website studio.
+Production-ready Next.js website for Codeylon, a Baghdad-based front-end website studio. It uses the App Router and exports to static HTML for Cloudflare Pages.
 
 ## Included
 
@@ -12,14 +12,17 @@ Production-ready static website for Codeylon, a Baghdad-based front-end website 
 - Canonical metadata, structured data, sitemap, robots rules, manifest, and social preview asset
 - Security headers for Netlify or Cloudflare Pages-compatible static hosting
 - Local fonts and authored SVG assets; no placeholder photography
-- Automated local/CI site checks
+- Reusable React components for navigation, legal layouts, consent, and the project form
+- Next.js metadata, sitemap, robots, manifest, and static route generation
+- Automated local/CI build and exported-site checks
 
 ## Preview locally
 
-Run this from the project directory:
+Install dependencies and start the Next.js development server:
 
 ```sh
-python3 -m http.server 4173
+npm install
+npm run dev
 ```
 
 Then open `http://127.0.0.1:4173/`.
@@ -27,8 +30,10 @@ Then open `http://127.0.0.1:4173/`.
 ## Validate
 
 ```sh
-python3 scripts/validate_site.py
+npm run check
 ```
+
+The production build is written to `out/`.
 
 ## Before production
 
