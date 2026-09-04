@@ -56,12 +56,14 @@ html {
   scroll-padding-top: calc(var(--header-height) + 24px);
   scrollbar-color: var(--gold-500) var(--navy-950);
   scrollbar-width: thin;
+  overscroll-behavior: none;
   overflow-x: clip;
 }
 
 body {
   margin: 0;
   min-width: 320px;
+  min-height: 100%;
   background: var(--paper);
   color: var(--ink);
   font-family: var(--font-sans);
@@ -69,6 +71,7 @@ body {
   line-height: 1.65;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none;
   overflow-x: clip;
 }
 
