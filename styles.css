@@ -680,12 +680,16 @@ button.text-link {
 }
 
 .principle-list li {
+  display: grid;
   min-width: 0;
-  padding: 1.25rem clamp(1rem, 2.5vw, 2rem);
+  min-height: 64px;
+  padding: 1rem clamp(0.75rem, 2vw, 1.5rem);
+  place-items: center;
   border-inline-start: 1px solid rgba(6, 18, 38, 0.25);
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   font-weight: 700;
   line-height: 1.35;
+  text-align: center;
 }
 
 .principle-list li:first-child {
@@ -1017,12 +1021,18 @@ button.text-link {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
-  gap: clamp(3rem, 8vw, 8rem);
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: clamp(3rem, 6vw, 5.5rem);
   align-items: start;
 }
 
+.contact-copy {
+  max-width: 34rem;
+  padding-top: clamp(0.5rem, 1vw, 1rem);
+}
+
 .contact-copy h2 {
+  max-width: 9ch;
   color: var(--paper-strong);
 }
 
@@ -1042,7 +1052,10 @@ button.text-link {
 }
 
 .contact-form {
-  padding: clamp(1.4rem, 4vw, 2.5rem);
+  width: 100%;
+  max-width: 640px;
+  padding: clamp(1.4rem, 2.6vw, 2rem);
+  justify-self: end;
   background: var(--paper-strong);
   color: var(--ink);
   border-top: 4px solid var(--gold-500);
@@ -1802,6 +1815,15 @@ button.text-link {
   .faq-grid,
   .contact-grid {
     gap: 2.75rem;
+  }
+
+  .contact-copy {
+    padding-top: 0;
+  }
+
+  .contact-form {
+    max-width: none;
+    justify-self: stretch;
   }
 
   .quality-grid {
